@@ -19,6 +19,16 @@ function App() {
       getRecords()
 
       async function getRecords() {
+
+        const data_offline = [
+          // 支出と入金のデータを作成
+          {
+            id: 1,
+            title: 'お金を払う',
+            isIncome: false,
+            amount: 1000,
+          }
+        ]
         const response = await fetch('https://4niabz6kn5itximklhilh5ik340iucxq.lambda-url.ap-northeast-1.on.aws/')
         const data = await response.json()
         console.log(data)
